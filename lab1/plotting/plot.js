@@ -99,7 +99,7 @@ var xScale = d3
 
 var yScale = d3
 	.scaleLinear()
-	.domain([0, d3.max(data[0].values, d => d.time)])
+	.domain([0, 1000])
 	.range([height - margin, 0]);
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
