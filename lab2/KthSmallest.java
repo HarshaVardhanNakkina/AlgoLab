@@ -80,7 +80,7 @@ public class KthSmallest {
         return devide5Blocks(arr);
     }
 
-    static double findKtheSmallest(double[] arr, int lo, int hi, int k) {
+    static double findKthSmallest(double[] arr, int lo, int hi, int k) {
 
         double medianOfMedians = getMedianOfMeds(arr);
 
@@ -93,9 +93,9 @@ public class KthSmallest {
         if (k - 1 == pivotInd)
             return arr[k - 1];
         else if (k - 1 < pivotInd)
-            return findKtheSmallest(arr, lo, pivotInd - 1, k);
+            return findKthSmallest(arr, lo, pivotInd - 1, k);
         else
-            return findKtheSmallest(arr, pivotInd + 1, hi, k);
+            return findKthSmallest(arr, pivotInd + 1, hi, k);
 
     }
 
@@ -128,14 +128,14 @@ public class KthSmallest {
         // FileWriter fr = new FileWriter("./sizeandtime.txt", true);
         // fr.write("{name: 'quicksort',\nvalues:[");
         // long startTime = System.currentTimeMillis();
-        // System.out.println(findKtheSmallest(arr, 0, arr.length - 1, 15));
+        // System.out.println(findKthSmallest(arr, 0, arr.length - 1, 15));
         // long endTime = System.currentTimeMillis();
         // System.out.println("Time taken: " + (endTime - startTime));
 
         for (int i = 0; i < 8; i++) {
             double[] arr = readInput("./testcases/" + (i + 1) + ".txt");
             long startTime = System.currentTimeMillis();
-            System.out.println(findKtheSmallest(arr, 0, arr.length - 1, arr.length / 2 - 1));
+            System.out.println(findKthSmallest(arr, 0, arr.length - 1, arr.length / 2 - 1));
             long endTime = System.currentTimeMillis();
             System.out.println("Time taken: " + (endTime - startTime));
             // timeTaken[i] = endTime - startTime;
