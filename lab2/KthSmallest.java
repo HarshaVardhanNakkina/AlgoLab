@@ -68,10 +68,12 @@ public class KthSmallest {
         // printArray(pseudoMeds);
 
         if (pseudoMeds.length == 1)
-            return pseudoMeds[pseudoMeds.length - 1];
+            return pseudoMeds[0];
 
         if (pseudoMeds.length == 2)
-            return (pseudoMeds[pseudoMeds.length / 2] + pseudoMeds[pseudoMeds.length / 2 - 1]) / 2;
+            return pseudoMeds[1];
+        // return (pseudoMeds[pseudoMeds.length / 2] + pseudoMeds[pseudoMeds.length / 2
+        // - 1]) / 2;
 
         return devide5Blocks(pseudoMeds);
     }
@@ -81,6 +83,9 @@ public class KthSmallest {
     }
 
     static double findKthSmallest(double[] arr, int lo, int hi, int k) {
+
+        if (lo == hi)
+            return arr[lo];
 
         double medianOfMedians = getMedianOfMeds(arr);
 
