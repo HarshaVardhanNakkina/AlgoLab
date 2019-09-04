@@ -26,8 +26,6 @@ class KthSmallest {
 			}
 			i++;
 		}
-		// System.out.println(
-		// "medianOfFive " + lo + " " + hi + " " + arr[lo + (hi - lo) / 2]);
 
 		return arr[lo + (hi - lo) / 2];
 
@@ -170,7 +168,7 @@ class KthSmallest {
 			int[] arr = readInput("./testcases/" + (i + 1) + ".txt");
 
 			long startTime = System.currentTimeMillis();
-			System.out.println("Kth smallest " + findKthSmallest(arr, 0, arr.length - 1, arr.length - 1));
+			System.out.println((arr.length - 1) + "th smallest " + findKthSmallest(arr, 0, arr.length - 1, arr.length - 1));
 			long endTime = System.currentTimeMillis();
 			long timeTaken = endTime - startTime;
 

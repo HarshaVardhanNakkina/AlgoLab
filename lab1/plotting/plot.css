@@ -10,6 +10,10 @@ svg {
 	stroke: black;
 }
 
+.axis .axis-legend {
+  font-size: 20px;
+}
+
 .text {
 	font-size: 12px;
 }
