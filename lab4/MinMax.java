@@ -30,18 +30,18 @@ public class MinMax {
   public static void main(String[] args) {
     InputStreamReader ir = new InputStreamReader(System.in);
     BufferedReader br = new BufferedReader(ir);
-    int n = 10; //* n = 10 default
+    int n = 1000000; //* n = 10 default
     try {
       n = Integer.parseInt(br.readLine());
     } catch (IOException ioe) {
       System.out.println(ioe);
     }
     int[] arr = new int[n];
-    int max = 50, min = 51;
+    int max = 51, min = 50;
     Random rand = new Random();
     for(int i = 0; i < n; i++) arr[i] = rand.nextInt(max + min) - min;
 
-    printArray(arr);
+    // printArray(arr);
     int[] minMaxPair = findMinMax(arr, 0, arr.length - 1);
     printArray(minMaxPair);
   }
