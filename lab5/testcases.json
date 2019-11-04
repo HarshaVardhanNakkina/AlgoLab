@@ -1,0 +1,14 @@
+{
+	"testcases":[
+		{
+			"name": "case 1",
+			"jobs": [
+				{
+					"id": 1,
+					"deadline": 4,
+					"profit": 20
+				}
+			]
+		}
+	]
+}
