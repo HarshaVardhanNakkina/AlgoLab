@@ -2,6 +2,12 @@ const fs 		= require('fs')
 const path 	= require('path')
 const chalk = require('chalk')
 
+function print(jobs) {
+	jobs.forEach(element => {
+		console.log(chalk.blue(element))
+	})
+}
+
 function getFreeSlot(deadLine, slots) {
 	if(slots[deadLine] === 0) return -1
   if(deadLine === slots[deadLine]) {
@@ -37,12 +43,6 @@ function scheduleTheJobs(jobs) {
 	return [schedule, profits]
 }
 
-function print(jobs) {
-	jobs.forEach(element => {
-		console.log(chalk.blue(element))
-	})
-}
-
 function getSchedule(data) {
 	data = data.split('\n')
 
@@ -68,9 +68,7 @@ function getSchedule(data) {
 	console.log(answer[0].join('\t'))
 	console.log(answer[1].join('\t'))
 	
-	const profit = answer[1].reduce((acc, cur) => {
-		return acc + cur
-	}, 0)
+	const profit = answer[1].reduce((acc, cur) => acc + cur)
 	console.log(chalk.red(profit))
 }
 
