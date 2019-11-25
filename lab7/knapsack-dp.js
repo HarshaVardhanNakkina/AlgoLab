@@ -2,7 +2,9 @@ const testcases = require('./testcases');
 
 testcases.forEach(tc => {
   let maxProfit = getMaxProfit(tc)
-	console.log(maxProfit)
+  console.log(tc)
+  console.log(maxProfit)
+  console.log("---------------------------")
 });
 
 function getMaxProfit(tc) {
