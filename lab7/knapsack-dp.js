@@ -1,6 +1,6 @@
 const testcases = require('./testcases');
 
-testcases.forEach(tc => {
+testcases.slice(0,1).forEach(tc => {
   let maxProfit = getMaxProfit(tc)
   console.log(tc)
   console.log(maxProfit)
@@ -22,6 +22,9 @@ function getMaxProfit(tc) {
       }else
         table[n][w] = table[n-1][w]
     }
+  }
+  for ( let n = 0; n <= items.length; n++) {
+    console.log(table[n].join(','));
   }
   return table[items.length][cap]
 }

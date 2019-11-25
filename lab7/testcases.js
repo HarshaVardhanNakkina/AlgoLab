@@ -1,5 +1,13 @@
 testcases = [
   {
+    w: 50,
+    items: [
+      {id: 1,profit: 60, weight: 10},
+      {id: 2,profit: 100, weight: 20},
+      {id: 3,profit: 120, weight: 30},
+    ]
+  },
+  {
     w: 60,
     items: [
       {id: 1,profit: 40, weight: 20},
@@ -15,14 +23,6 @@ testcases = [
       {id: 2,profit: 100, weight: 10},
       {id: 3,profit: 50, weight: 40},
       {id: 4,profit: 60, weight: 30}
-    ]
-  },
-  {
-    w: 50,
-    items: [
-      {id: 1,profit: 60, weight: 10},
-      {id: 2,profit: 100, weight: 20},
-      {id: 3,profit: 120, weight: 30},
     ]
   },
   {
